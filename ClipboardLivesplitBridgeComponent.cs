@@ -61,6 +61,7 @@ namespace ClipboardLivesplitBridge
                 !String.Equals(text, "split", StringComparison.OrdinalIgnoreCase) &&
                 !String.Equals(text, "reset", StringComparison.OrdinalIgnoreCase))
             {
+                lastCommand = text;
                 return;
             }
 
@@ -69,7 +70,6 @@ namespace ClipboardLivesplitBridge
                 return;
 
             lastCommand = text;
-
             ProcessCommand(text);
         }
 
